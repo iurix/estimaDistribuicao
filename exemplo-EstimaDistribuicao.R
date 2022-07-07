@@ -5,14 +5,16 @@ rm(list=ls())
 
 # #CHAMADA DE PACOTES externa
 library(tidyverse) # gera tibbles/dataframes
-library(here)
+#library(here)
+library(modules)
+library(rstudioapi)
 
 ###  para rodar o modulo, recomenda-se ter instalado os seguintes pacotes:
 # magrittr,dplyr,tidyr,tibble,broom,fitdistrplus,graphics,stats,dgof,actuar,triangle,goftest,grDevices
 
 ######### LEITURA DE DADOS ##################
 getwd()
-setwd(here()) # "C://Users//iuri.santos//Downloads") # substituir pelo seu wd
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))#"C://Users//iuri.santos//Downloads")#here()) # "C://Users//iuri.santos//Downloads") # substituir pelo seu wd
 
 ### chamada de modulo
 # para chamar funcao, recomendo usar como modelo
